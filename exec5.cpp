@@ -4,29 +4,27 @@ using namespace std;
 
 int main()
 {
-    int vet[5];
-    int temp;
-    int val;
+    unsigned int vet[5];
+    unsigned int val;
 
-    for (int i = 0; i < 5; i++)
+    for (unsigned int i = 0; i < 5; ++i)
     {
         do
         {
-            cout << "Insira um valor inteiro positivo(entre 1 e 10): " << endl;
+            cout << "Insira um valor inteiro positivo(entre 1 e 10):\n";
             cin >> val;
             if (val < 1 || val > 10)
             {
-                cout << "O valor deve ser inteiro positivo(entre 1 e 10): " << endl;
+                cout << "O valor deve ser inteiro positivo(entre 1 e 10):\n";
             }
         } while (val < 1 || val > 10);
         vet[i] = val;
     }
 
-    for (int i = 0; i < 4; i++)
+    for (unsigned int i = 0; i < 4; ++i)
     {
-        int minIndex = i;
-
-        for (int j = i + 1; j < 5; j++)
+        unsigned int minIndex = i;
+        for (unsigned int j = i + 1; j < 5; ++j)
         {
             if (vet[j] < vet[minIndex])
             {
@@ -35,15 +33,15 @@ int main()
         }
         if (minIndex != i)
         {
-            temp = vet[i];
+            unsigned int temp = vet[i];
             vet[i] = vet[minIndex];
             vet[minIndex] = temp;
         }
     }
 
-    for (int i = 0; i < 5; i++)
+    for (unsigned int i = 0; i < 5; ++i)
     {
-        cout << vet[i] << " ";
+        cout << vet[i] << ' ';
     }
 
     return 0;

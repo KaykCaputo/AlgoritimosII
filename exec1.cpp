@@ -6,14 +6,14 @@ using namespace std;
 
 int main()
 {
-    int vet[TMAX] = {0};
-    int val = 5;
+    unsigned int vet[TMAX];
+    unsigned int val = 5;
 
-    for (int i = 0; i < TMAX; i++)
+    for (unsigned int i = 0; i < TMAX; ++i)
     {
         vet[i] = val;
         val += 5;
-        cout << vet[i] << endl;
+        cout << vet[i] << '\n';
     }
 
     return 0;

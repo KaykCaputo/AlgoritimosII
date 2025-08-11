@@ -4,10 +4,10 @@ using namespace std;
 
 int main()
 {
-    int vet[10] = {0};
-    int val;
+    unsigned int vet[10];
+    unsigned int val;
 
-    for (int i = 0; i < 10; i++)
+    for (unsigned int i = 0; i < 10; ++i)
     {
         do
         {
@@ -15,19 +15,19 @@ int main()
             cin >> val;
             if (val < 0)
             {
-                cout << "O numero deve ser inteiro e positivo!" << endl;
+                cout << "O numero deve ser inteiro e positivo!\n";
             }
         } while (val < 0);
         vet[i] = val;
     }
 
-    cout << endl;
+    cout << '\n';
 
-    for (int i = 0; i < 10; i++)
+    for (unsigned int i = 0; i < 10; ++i)
     {
-        if (vet[i] % 2 == 0)
+        if (!(vet[i] & 1))
         {
-            cout << vet[i] << " - " << i + 1 << "º Posição" << "  É par! " << endl;
+            cout << vet[i] << " - " << i + 1 << "º Posição  É par!\n";
         }
     }
 

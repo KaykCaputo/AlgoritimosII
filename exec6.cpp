@@ -3,16 +3,16 @@ using namespace std;
 
 int main()
 {
-    int vet[5];
-    int val;
+    unsigned int vet[5];
+    unsigned int val;
     string op;
-    int searchNum;
+    unsigned int searchNum;
 
-    for (int i = 0; i < 5; i++)
+    for (unsigned int i = 0; i < 5; ++i)
     {
         do
         {
-            cout << "insira um valor inteiro positivo(entre 1 e 10): " << endl;
+            cout << "insira um valor inteiro positivo(entre 1 e 10):\n";
             cin >> val;
             if (val < 1 || val > 10)
             {
@@ -28,9 +28,7 @@ int main()
         cin >> op;
 
         if (op == "N")
-        {
             break;
-        }
 
         do
         {
@@ -46,11 +44,11 @@ int main()
 
         bool encontrado = false;
 
-        for (int i = 0; i < 5; i++)
+        for (unsigned int i = 0; i < 5; ++i)
         {
             if (vet[i] == searchNum)
             {
-                cout << "Número encontrado! - " << vet[i] << " na posição " << i << endl;
+                cout << "Número encontrado! - " << vet[i] << " na posição " << i << '\n';
                 encontrado = true;
                 break;
             }
@@ -61,7 +59,7 @@ int main()
             cout << "Número não encontrado no vetor.\n";
         }
 
-    } while (op != "S");
+    } while (op != "N");
 
     return 0;
 }
